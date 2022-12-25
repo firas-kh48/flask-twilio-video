@@ -7,11 +7,17 @@ from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 
 load_dotenv()
-twilio_account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
-twilio_api_key_sid = os.environ.get('TWILIO_API_KEY_SID')
-twilio_api_key_secret = os.environ.get('TWILIO_API_KEY_SECRET')
-twilio_client = Client(twilio_api_key_sid, twilio_api_key_secret,
-                       twilio_account_sid)
+# twilio_account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
+# twilio_api_key_sid = os.environ.get('TWILIO_API_KEY_SID')
+# twilio_api_key_secret = os.environ.get('TWILIO_API_KEY_SECRET')
+
+twilio_account_sid = "AC9df59ecae15cfdadfe4bb526fb84027c"
+twilio_api_key_sid = "SKd53caedd22ee95792ddf5f018acef9bc"
+twilio_api_key_secret = "q1w4o2ieuKgWqjaE8Tqur1bhSWiFcZrp"
+twilio_client = Client(twilio_api_key_sid, twilio_api_key_secret,twilio_account_sid)
+
+# twilio_client = Client("SKd53caedd22ee95792ddf5f018acef9bc","q1w4o2ieuKgWqjaE8Tqur1bhSWiFcZrp","AC9df59ecae15cfdadfe4bb526fb84027c")
+
 
 app = Flask(__name__)
 
